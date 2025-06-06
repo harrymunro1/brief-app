@@ -1,13 +1,13 @@
-from langchain_community.document_loaders import Docx2txtLoader
+# from langchain_community.document_loaders import Docx2txtLoader
 from langchain.prompts import PromptTemplate
 from docx import Document
-import re
-import os
+# import re
+#import os
 from langchain_openai import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
 import streamlit as st
 from dotenv import load_dotenv
-import base64
+# import base64
 from io import BytesIO
 
 
@@ -29,12 +29,12 @@ def create_docx(text):
 
 ## Create the top line 
 st.write("# Tool for interpreting client briefs")
-st.write("## About")
 st.write("""This tool is desinged to help CS understand which AA projects would be best suited to tackle thier clients needs.""")
 st.write("## Inputs")
 
 # Get api key
-api_key = os.getenv("OPENAI_API_KEY")
+#api_key = os.getenv("OPENAI_API_KEY")
+api_key = st.secrets.get("OPENAI_API_KEY")
 
 # Get project master and brief
 uploaded_file = st.file_uploader("Upload **project master**, stored here `W:\Commercial\Expert Solutions\Brief Interpretation\Master`",

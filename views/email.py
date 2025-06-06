@@ -22,7 +22,7 @@ st.write("This app is designed to take in a brief recommendation and setup an em
 
 # Get api key
 # api_key = os.getenv("OPENAI_API_KEY")
-api_key = st.secrets("OPENAI_API_KEY")
+api_key = st.secrets.get("OPENAI_API_KEY")
 
 
 # get the client name
