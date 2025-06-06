@@ -15,7 +15,7 @@ def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
-img_base64 = get_base64_image("C:\\Harry Data\\Live Projects\\Horses LLM - Apr 25\\kantarworldpanel_logo.png")
+img_base64 = get_base64_image("kantarworldpanel_logo.png")
 
 
 # Inject custom CSS to place the image
